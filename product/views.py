@@ -10,7 +10,7 @@ from django.shortcuts import render
 
 
 class ProductListAPI(APIView):
-    def GET(self, request):
+    def get(self, request):
         queryset = Product.objects.all()
         print(queryset)
         serializer = ProductSerializer(queryset, many=True)
